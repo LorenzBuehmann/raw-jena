@@ -6,6 +6,7 @@ import fr.gdd.sage.writers.ExtensibleRowSetWriterJSON;
 import fr.gdd.sage.writers.ModuleOutputRegistry;
 import fr.gdd.sage.writers.OutputWriterJSONRAW;
 import org.apache.jena.fuseki.main.FusekiServer;
+import org.apache.jena.fuseki.main.sys.FusekiAutoModule;
 import org.apache.jena.fuseki.main.sys.FusekiModule;
 import org.apache.jena.fuseki.server.Endpoint;
 import org.apache.jena.fuseki.server.Operation;
@@ -26,7 +27,7 @@ import org.slf4j.LoggerFactory;
  * `META-INF/…/…FusekiModule` file as per se in documentation, or
  * work with `addModule`.
  */
-public class RAWModule implements FusekiModule {
+public class RAWModule implements FusekiAutoModule {
     private static Logger logger = LoggerFactory.getLogger(RAWModule.class);
 
     public RAWModule() {}

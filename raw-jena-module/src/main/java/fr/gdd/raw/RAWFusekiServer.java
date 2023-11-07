@@ -111,7 +111,9 @@ public class RAWFusekiServer {
      * @return A fuseki server not yet running.
      */
     static FusekiServer buildServer(String datasetPath, Dataset dataset, Integer port, String ui) {
-        FusekiModules.add(new RAWModule());
+        RAWModule module = new RAWModule();
+        module.start();
+        FusekiModules fusekiModules = FusekiModules.create(module);
 
         ProgressJenaIterator.NB_WALKS = 1000; // (TODO) let it be configurable
 
@@ -130,6 +132,7 @@ public class RAWFusekiServer {
                 .enableMetrics(true)
                 .port(port)
                 .numServerThreads(1, 10)
+                .fusekiModules(fusekiModules)
                 // .loopback(false)
                 // .serverAuthPolicy(Auth.ANY_ANON)
                 // .addProcessor("/$/server", new ActionServerStatus())

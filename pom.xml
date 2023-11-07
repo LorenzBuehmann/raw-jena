@@ -12,9 +12,16 @@
   <description>RAndom Walks for Apache Jena.</description>
 
   <repositories>
+<!--    <repository>-->
+<!--      <id>fr.gdd.sage</id> &lt;!&ndash; to retrieve fr.gdd.sage dependencies &ndash;&gt;-->
+<!--      <url>https://chat-wane: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@maven.pkg.github.com/Chat-Wane/sage-jena</url>-->
+<!--    </repository>-->
     <repository>
-      <id>fr.gdd.sage</id> <!-- to retrieve fr.gdd.sage dependencies -->
-      <url>https://chat-wane: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@maven.pkg.github.com/Chat-Wane/sage-jena</url>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/Chat-Wane/sage-jena</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
     </repository>
   </repositories>
 
@@ -42,9 +49,9 @@
      look for sage-jena:pom:${revision} instead of sage-jena:pom:0.0.1 Thus
      fails. Hardcoded version of parent works… -->
     <!-- <revision>0.0.1</revision> -->
-    <sage.version>0.0.1</sage.version>
+    <sage.version>0.0.2</sage.version>
     <junit.version>5.9.2</junit.version>
-    <jena.version>4.7.0</jena.version>
+    <jena.version>4.9.0</jena.version>
     <slf4j.version>2.0.6</slf4j.version>
     <args4j.version>2.33</args4j.version>
     <common.compress.version>1.23.0</common.compress.version>

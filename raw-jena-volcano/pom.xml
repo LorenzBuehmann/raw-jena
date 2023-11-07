@@ -52,6 +52,12 @@
       <artifactId>sage-jena-databases</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.jena</groupId>
+      <artifactId>jena-shaded-guava</artifactId>
+      <version>4.8.0</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
